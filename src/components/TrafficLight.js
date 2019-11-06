@@ -9,6 +9,10 @@ class TrafficLight extends Component{
   constructor() {
     super();
     this.currentColor = RED;
+
+    setInterval(() => {
+      this.currentColor = this.getNextColor(this.currentColor)
+    }, 1000)
   }
   getNextColor(color){
     switch(color){
